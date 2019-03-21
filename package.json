@@ -1,0 +1,19 @@
+{
+  "name": "contacts_app_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neu-mis-info6150-spring-2019/assignment-8-ishitasequeira.git"
+  },
+  "author": "ishita",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongoose": "^4.13.3"
+  }
+}

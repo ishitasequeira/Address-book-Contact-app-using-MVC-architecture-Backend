@@ -9,14 +9,14 @@ let ContactSchema = new Schema({
     /**
      * First Name of the contact.
      */
-   FName: {
+   FirstName: {
         type: String,
         required: "Name is required"
     },
     /**
      * Last Name of the contact.
      */
-   LName: {
+   LastName: {
     type: String,
     },
     /**

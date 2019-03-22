@@ -24,7 +24,7 @@ app.use(function (req, res, next) {
 });
 
 //Initialize app
-let initApp = require('./api/app');//this would intialize your model and route
+let initApp = require('./api/app');//this would intialize your model and routes
 initApp(app);
 
 app.listen(port);

@@ -4,10 +4,15 @@ let express = require('express'),
     mongoose = require('mongoose'), //created model loading here
     bodyParser = require('body-parser');
 
-// mongoose instance connection url connection
+// // mongoose instance connection url connection
 mongoose.connect('mongodb://localhost:27017/contactDB', {
     useMongoClient: true
 });
+//  mongoose.connect('mongodb+srv://root:'+process.env.MONGO_ATLAS_PWD+'@cluster0-s1yxd.mongodb.net/test?retryWrites=true',
+// {
+//    //useMongoClient: true
+//    useNewUrlParser: true
+// });
 //mongoose.Promise = global.Promise;
 
 //Adding body parser for handling request and response objects.

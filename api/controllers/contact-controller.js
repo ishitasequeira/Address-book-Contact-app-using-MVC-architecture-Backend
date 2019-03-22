@@ -40,3 +40,21 @@ exports.post = function (request, response) {
         .then(resolve)
         .catch(renderErrorResponse(response));
 };
+
+/**
+ * Throws error if error object is present.
+ *
+ * @param {Response} response The response object
+ * @return {Function} The error handler function.
+ */
+let renderErrorResponse = (response) => {
+    const errorCallback = (error) => {
+        if (error) {
+            response.status(500);
+            response.json({
+                message: error.message
+            });
+        }
+    }
+    return errorCallback;
+};

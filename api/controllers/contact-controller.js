@@ -41,6 +41,23 @@ exports.post = function (request, response) {
         .catch(renderErrorResponse(response));
 };
 
+
+/**
+ * Returns a contact object in JSON.
+ *
+ * @param {request} {HTTP request object}
+ * @param {response} {HTTP response object}
+ */
+exports.get = function (request, response) {
+    const resolve = (contact) => {
+        response.status(200);
+        response.json(contact);
+    };
+    contactService.get(request.params.contactId)
+        .then(resolve)
+        .catch(renderErrorResponse(response));
+};
+
 /**
  * Throws error if error object is present.
  *

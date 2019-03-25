@@ -27,4 +27,13 @@ exports.save = function (contact) {
     return promise;
 };
 
-``
+/**
+ * Returns the contact object matching the id.
+ *
+ * @param {string} contactId {Id of the sticky object}
+ */
+exports.get = function (contactId) {
+    console.log("Service "+contactId);
+    const promise = Contact.findById(contactId).exec();
+    return promise;
+};

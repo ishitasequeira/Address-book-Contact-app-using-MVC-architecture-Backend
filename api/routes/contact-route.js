@@ -11,8 +11,8 @@ module.exports = function (app) {
         .post(contactController.post);
 
     // Contact Routes for get, update and delete.
-    // app.route('/contacts/:contactId')
-    //     .get(contactController.get)
+    app.route('/contacts/:contactId')
+        .get(contactController.get)
     //     .put(contactController.put)
        // .delete(contactController.delete);
 };

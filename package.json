@@ -15,5 +15,9 @@
   "dependencies": {
     "express": "^4.16.2",
     "mongoose": "^4.13.3"
+  },
+  "devDependencies": {
+    "esdoc": "^1.1.0",
+    "esdoc-standard-plugin": "^1.0.0"
   }
 }

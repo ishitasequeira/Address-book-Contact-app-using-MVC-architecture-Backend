@@ -17,9 +17,8 @@ exports.search = function (params) {
 };
 
 /**
- * Saves and returns the new Contact object.
- *
- * @param {Object} contact {Contact object}
+ * 
+ * @param {Object} contact {Contact object}-Saves and returns the new Contact object.
  */
 exports.save = function (contact) {
     const newContact = new Contact(contact);
@@ -28,7 +27,7 @@ exports.save = function (contact) {
 };
 
 /**
- * Returns the contact object matching the id.
+ * @desc Returns the contact object matching the id.
  *
  * @param {string} contactId {Id of the sticky object}
  */

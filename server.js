@@ -1,36 +1,47 @@
+    /**
+     * @param {} express -import  the express framework
+     * @param {} app -
+     * @param {} contactModel -created model loading here
+     * @param {} bodyparser - importing body parsing
+     */
 let express = require('express'),
     app = express(),
     port = process.env.PORT || 3000,
-    mongoose = require('mongoose'), //created model loading here
+    mongoose = require('mongoose'), 
     bodyParser = require('body-parser');
-
-// // mongoose instance connection url connection
-mongoose.connect('mongodb://localhost:27017/contactDB', {
+    /**
+     * @desc mongoose instance  url connection
+     */ 
+    mongoose.connect('mongodb://localhost:27017/contactDB', {
     useMongoClient: true
 });
-//  mongoose.connect('mongodb+srv://root:'+process.env.MONGO_ATLAS_PWD+'@cluster0-s1yxd.mongodb.net/test?retryWrites=true',
-// {
-//    //useMongoClient: true
-//    useNewUrlParser: true
-// });
-//mongoose.Promise = global.Promise;
 
-//Adding body parser for handling request and response objects.
+    /**
+     * @desc Adding body parser for handling request and response objects.
+     */ 
 app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(bodyParser.json());
 
-//Enabling CORS
+    /**
+     * @desc Enabling CORS
+     */
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
 });
 
-//Initialize app
-let initApp = require('./api/app');//this would intialize your model and routes
+    /**
+     * 
+     * @param {} initApp - Initialize app(this would intialize your model and routes)
+     */
+let initApp = require('./api/app');
 initApp(app);
 
 app.listen(port);
-console.log('Contacts RESTful API server started on: ' + port); // intiates the server
+    /**
+     * @desc intiates the server
+     */
+console.log('Contacts RESTful API server started on: ' + port);

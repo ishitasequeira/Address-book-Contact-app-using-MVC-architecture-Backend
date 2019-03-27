@@ -1,14 +1,14 @@
 /**
- * Controller for contact endpoints.
+ * @desc Controller for contact endpoints.
  */
 
 'use strict';
-//import contact service.
+/**
+ * @desc import contact service.
+ */
 const contactService = require('../services/contact-service');
 /**
- * Returns a list of stickies in JSON based on the
- * search parameters.
- *
+ * @return Returns a list of stickies in JSON based on the search parameters.
  * @param {request} {HTTP request object}
  * @param {response} {HTTP response object}
  */
@@ -23,9 +23,8 @@ exports.list = function (request, response) {
 };
 
 /**
- * Creates a new contact with the request JSON and
- * returns contact JSON object.
- *
+ * @desc Creates a new contact with the request JSON and
+ * @return returns contact JSON object.
  * @param {request} {HTTP request object}
  * @param {response} {HTTP response object}
  */
@@ -43,10 +42,9 @@ exports.post = function (request, response) {
 
 
 /**
- * Returns a contact object in JSON.
- *
  * @param {request} {HTTP request object}
  * @param {response} {HTTP response object}
+ * @return Returns a contact object in JSON.
  */
 exports.get = function (request, response) {
     const resolve = (contact) => {
@@ -59,8 +57,7 @@ exports.get = function (request, response) {
 };
 
 /**
- * Throws error if error object is present.
- *
+ * @desc Throws error if error object is present.
  * @param {Response} response The response object
  * @return {Function} The error handler function.
  */
@@ -73,5 +70,5 @@ let renderErrorResponse = (response) => {
             });
         }
     }
-    return errorCallback;
+    return errorCallback;yh
 };

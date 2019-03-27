@@ -3,31 +3,32 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 /**
- * Mongoose schema for contact object.
+ * @desc Mongoose schema for contact object. 
+ * 
  */
 let ContactSchema = new Schema({
     /**
-     * First Name of the contact.
+     * @desc First Name of the person.
      */
    FirstName: {
         type: String,
         required: "Name is required"
     },
     /**
-     * Last Name of the contact.
+     * @desc Last Name of the person.
      */
    LastName: {
     type: String,
     },
     /**
-     * Phone number 
+     *  @desc Phone number of the person
      */
     PhoneNumber: {
         type: Number,
         required: "PhoneNumber is required"
     },
     /**
-     * Email address
+     * @desc Email address of the person
      */
     EmailId: {
         type: String
@@ -35,5 +36,7 @@ let ContactSchema = new Schema({
 }, {
     versionKey: false
 });
-
+/**
+ * @desc used to export the entire schema
+ */
 module.exports = mongoose.model('contacts', ContactSchema);

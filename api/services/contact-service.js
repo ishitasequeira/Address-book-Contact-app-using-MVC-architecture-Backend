@@ -1,5 +1,5 @@
 /**
- * Service for contact operations.
+ * @desc Service for contact operations.
  */
 
 'use strict';
@@ -7,8 +7,7 @@ const mongoose = require('mongoose'),
 Contact = mongoose.model('contacts');
 
 /**
- * Returns an array of sticky object matching the search parameters.
- *
+ * @return Returns an array of contact object matching the search parameters.
  * @param {Object} params {Search parameters}
  */
 exports.search = function (params) {
@@ -17,7 +16,6 @@ exports.search = function (params) {
 };
 
 /**
- * 
  * @param {Object} contact {Contact object}-Saves and returns the new Contact object.
  */
 exports.save = function (contact) {
@@ -28,7 +26,6 @@ exports.save = function (contact) {
 
 /**
  * @desc Returns the contact object matching the id.
- *
  * @param {string} contactId {Id of the sticky object}
  */
 exports.get = function (contactId) {

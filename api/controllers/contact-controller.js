@@ -8,7 +8,7 @@
  */
 const contactService = require('../services/contact-service');
 /**
- * @return Returns a list of stickies in JSON based on the search parameters.
+ * @return  Returns a list of stickies in JSON based on the search parameters.
  * @param {request} {HTTP request object}
  * @param {response} {HTTP response object}
  */

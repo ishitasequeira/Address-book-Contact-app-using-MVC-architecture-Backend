@@ -12,8 +12,7 @@ Used MongoDB for the persistence layer.
 5. Build
 6. Default build mode is production. 
 
-## To build the app
+## To build and Deploy the app
 1. run npm run build.
-2. Development Server
-3. Follow below steps to lauch the app using webpack-dev-server.
-
+2. Run application server using npm start or npm run start
+3. You can access the app at http://localhostL3000/

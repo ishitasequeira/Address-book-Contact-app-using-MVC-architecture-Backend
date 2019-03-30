@@ -4,7 +4,7 @@
 
 'use strict';
 const mongoose = require('mongoose'),
-Contact = mongoose.model('contacts');
+    Contact = mongoose.model('contacts');
 
 /**
  * @return Returns an array of contact object matching the search parameters.
@@ -29,7 +29,7 @@ exports.save = function (contact) {
  * @param {string} contactId {Id of the sticky object}
  */
 exports.get = function (contactId) {
-    console.log("Service "+contactId);
+    console.log("Service " + contactId);
     const promise = Contact.findById(contactId).exec();
     return promise;
 };

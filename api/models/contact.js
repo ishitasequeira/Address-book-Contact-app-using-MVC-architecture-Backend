@@ -10,15 +10,15 @@ let ContactSchema = new Schema({
     /**
      * @desc First Name of the person.
      */
-   FirstName: {
+    FirstName: {
         type: String,
         required: "Name is required"
     },
     /**
      * @desc Last Name of the person.
      */
-   LastName: {
-    type: String,
+    LastName: {
+        type: String,
     },
     /**
      *  @desc Phone number of the person
@@ -34,8 +34,8 @@ let ContactSchema = new Schema({
         type: String
     }
 }, {
-    versionKey: false
-});
+        versionKey: false
+    });
 /**
  * @desc used to export the entire schema
  */

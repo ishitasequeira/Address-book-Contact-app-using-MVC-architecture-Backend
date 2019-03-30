@@ -70,5 +70,5 @@ let renderErrorResponse = (response) => {
             });
         }
     }
-    return errorCallback;yh
+    return errorCallback; yh
 };

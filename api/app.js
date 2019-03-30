@@ -1,14 +1,14 @@
 
 'use strict';
 module.exports = function (app) {
-     /**
-     * @property {} contactModel - Initialize models
-     *
-     */
+    /**
+    * @property {Object} contactModel - Initialize models
+    *
+    */
     let contactModel = require('./models/contact');
 
     /**
-     * @property {} contactModel -Initialize routes(point to route.js)
+     * @property {Object} contactModel -Initialize routes(point to route.js)
      */
     let contactRoutes = require('./routes/contact-route');
     contactRoutes(app);

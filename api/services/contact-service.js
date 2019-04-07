@@ -11,7 +11,8 @@ const mongoose = require('mongoose'),
  * @param {Object} params {Search parameters}
  */
 exports.search = function (params) {
-    const promise = Contact.find(params).exec();
+    console.log(params);
+    const promise = Contact.find(params).collation({ locale: "en" }).sort("FirstName").exec();
     return promise;
 };
 
@@ -20,8 +21,14 @@ exports.search = function (params) {
  */
 exports.save = function (contact) {
     const newContact = new Contact(contact);
-    const promise = newContact.save();
-    return promise;
+    // let present = Contact.findOne({"FirstName":newContact.FirstName, "LastName":newContact.LastName});
+    // if(!present){
+        console.log("qwerty"+newContact.phoneNumber);
+        const promise = newContact.save();
+        return promise;
+    // }else{
+    //     return null;
+    // }
 };
 
 /**

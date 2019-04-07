@@ -23,14 +23,15 @@ let ContactSchema = new Schema({
     /**
      *  @desc Phone number of the person
      */
-    PhoneNumber: {
+    phoneNumber: {
         type: Number,
         required: "PhoneNumber is required"
     },
     /**
      * @desc Email address of the person
      */
-    EmailId: {
+    // EmailId: {
+    email:{
         type: String
     }
 }, {

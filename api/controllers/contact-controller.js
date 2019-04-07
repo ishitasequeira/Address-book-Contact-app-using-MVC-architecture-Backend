@@ -30,7 +30,7 @@ exports.list = function (request, response) {
  */
 exports.post = function (request, response) {
     const newContact = Object.assign({}, request.body);
-    console.log(newContact);
+    //console.log("C"+newContact.phoneNumber);
     const resolve = (contact) => {
         response.status(200);
         response.json(contact);
@@ -56,6 +56,8 @@ exports.get = function (request, response) {
         .catch(renderErrorResponse(response));
 };
 
+
+
 /**
  * @desc Throws error if error object is present.
  * @param {Response} response The response object
@@ -70,5 +72,5 @@ let renderErrorResponse = (response) => {
             });
         }
     }
-    return errorCallback; yh
+    return errorCallback; 
 };

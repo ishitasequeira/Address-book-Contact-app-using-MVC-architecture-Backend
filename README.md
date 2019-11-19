@@ -1,4 +1,4 @@
-# Assignment 8: Develop REST API for Asynchronous JavaScript: Address book/Contact app using MVC architecture
+# Develop REST API for Asynchronous JavaScript: Address book/Contact app using MVC architecture
 
 ## Technologies :
 Develop a rest api AddressBook application using express framework for developing the endpoints.
